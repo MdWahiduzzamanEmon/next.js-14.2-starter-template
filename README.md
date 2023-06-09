@@ -66,8 +66,7 @@ yarn start
 pnpm start
 ```
 
-<!-- https://github.com/MdWahiduzzamanEmon -->
+## Author
 
-This template is created by [Md Wahiduzzamn Emon](<a href="
-    https://github.com/MdWahiduzzamanEmon
-    " target="_blank">Md Wahiduzzamn Emon</a>)
+- <img align="left" src="https://user-images.githubusercontent.com/83487057/224383152-3d83875a-6e49-46c2-be8f-5d0627e0a27e.png" alt="md-wahiduzzaman-emon" height="40" width="40" /> **Md. Wahiduzzaman Emon**
+  - Github: [@md-wahiduzzaman-emon]
