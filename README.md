@@ -13,7 +13,6 @@
 - [x] Sitemap
 - [x] Robots.txt
 
-
 ## First, install the dependencies by running the following command in the project directory.
 
 ```bash
@@ -47,7 +46,6 @@ yarn dev -- -p <port>
 pnpm dev -- -p <port>
 ```
 
-
 ## To build the project
 
 ```bash
@@ -68,4 +66,8 @@ yarn start
 pnpm start
 ```
 
-This template is created by [Md Wahiduzzamn Emon]
+<!-- https://github.com/MdWahiduzzamanEmon -->
+
+This template is created by [Md Wahiduzzamn Emon](<a href="
+    https://github.com/MdWahiduzzamanEmon
+    " target="_blank">Md Wahiduzzamn Emon</a>)
