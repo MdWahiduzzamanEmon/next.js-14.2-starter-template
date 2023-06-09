@@ -12,6 +12,9 @@
 - [x] SEO
 - [x] Sitemap
 - [x] Robots.txt
+- [x] Docker
+- [x] Docker Compose
+
 
 ## First, install the dependencies by running the following command in the project directory.
 
