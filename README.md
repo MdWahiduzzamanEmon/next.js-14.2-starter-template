@@ -1,19 +1,12 @@
 "Next13.4 Latest Project Template: An easy-to-use and pre-configured project template for kickstarting your Next.js 13.4 projects effortlessly. This template comes with all the necessary packages and configurations, allowing you to quickly set up and dive into developing your next cutting-edge web application with Next.js.
 
-Features:
+##Getting Started:
 
-Next.js 13.4: Benefit from the latest version of Next.js and leverage its advanced features and performance enhancements.
-Optimized Package Setup: Essential packages and dependencies are pre-installed, saving you time and effort in setting up the project.
-Configuration Ready: Common project configurations, such as Babel, ESLint, and Prettier, are already set up for you, ensuring code quality and consistency.
-Tailwind CSS Integration: Seamlessly integrate Tailwind CSS for rapid and responsive UI development.
-API Routes and Server-side Rendering: Leverage Next.js's powerful API routes and server-side rendering capabilities for efficient data fetching and server-side logic.
-Getting Started:
-
-Clone this repository to your local machine.
-Install the required dependencies using your preferred package manager.
-Start the development server and explore the example components and pages.
-Customize and build upon the template to create your unique Next.js 13.4 project.
-We welcome contributions, bug reports, and feature suggestions. Feel free to fork this repository and submit pull requests to help improve this project template.
+*Clone this repository to your local machine.
+*Install the required dependencies using your preferred package manager.
+*Start the development server and explore the example components and pages.
+*Customize and build upon the template to create your unique Next.js 13.4 project.
+*We welcome contributions, bug reports, and feature suggestions. Feel free to fork this repository and submit pull requests to help improve this project template.
 
 Let's build amazing web applications with Next.js 13.4 together!"
 
