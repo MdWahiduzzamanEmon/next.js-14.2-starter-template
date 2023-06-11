@@ -5,6 +5,9 @@
 - [x] Next.js
 - [x] TypeScript
 - [x] Tailwind CSS
+- [x] PostCSS
+- [x] React Icons
+- [x] Next-themes
 - [x] ESLint
 - [x] Prettier
 - [x] Formatter
@@ -14,6 +17,7 @@
 - [x] Robots.txt
 - [x] Docker
 - [x] Docker Compose
+- [x] Dark Mode
 
 
 ## First, install the dependencies by running the following command in the project directory.
