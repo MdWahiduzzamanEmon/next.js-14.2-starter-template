@@ -4,7 +4,7 @@
 import { usePathname } from "next/navigation";
 import { useEffect, useState } from "react";
 
-export function NavigationEvents({ children }) {
+export function NavigationEvents({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
 
   const [mounted, setMounted] = useState(false);
