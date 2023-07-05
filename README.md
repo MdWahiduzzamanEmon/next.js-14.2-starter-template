@@ -19,6 +19,8 @@ Let's build amazing web applications with Next.js 13.4 together!"
 - [x] Next.js
 - [x] TypeScript
 - [x] Tailwind CSS
+- [x] Redux 
+- [x] Redux Toolkit
 - [x] PostCSS
 - [x] React Icons
 - [x] Next-themes
