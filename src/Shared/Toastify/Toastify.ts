@@ -1,5 +1,10 @@
 import { toast } from "react-toastify";
-const cToastify = (props) => {
+interface IToastify {
+  type: "success" | "error" | "info" | "warn";
+  message: string;
+}
+
+const cToastify = (props: IToastify) => {
   const { type, message } = props;
   toast[type](message, {
     position: "top-center",
