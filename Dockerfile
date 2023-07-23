@@ -4,21 +4,28 @@ WORKDIR /app
 
 COPY package.json package-lock.json ./
 
-RUN npm install --f --production
+# RUN npm install --f --production
+RUN npm i --production
 
 COPY . .
 
 EXPOSE 3000
 
-# CMD ["npm", "run", "dev"]
+# CMD ["npm", "run", "start"]
 
-# // production
+# Build the Next.js application
 RUN npm run build
 
 RUN npm run postbuild
-RUN npm run format
+# Install PM2 globally
+RUN npm install pm2 -g
 
-CMD ["npm", "run", "start"]
+# Expose the port that the Next.js application will run on
+EXPOSE 3000
+
+# Start the Next.js application with PM2
+CMD ["pm2-runtime", "npm", "--", "start"]
+
 
 
 # # nginx state for serving content

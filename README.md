@@ -19,7 +19,7 @@ Let's build amazing web applications with Next.js 13.4 together!"
 - [x] Next.js
 - [x] TypeScript
 - [x] Tailwind CSS
-- [x] Redux 
+- [x] Redux
 - [x] Redux Toolkit
 - [x] PostCSS
 - [x] React Icons
@@ -33,6 +33,7 @@ Let's build amazing web applications with Next.js 13.4 together!"
 - [x] Robots.txt
 - [x] Docker
 - [x] Docker Compose
+- [x] PM2
 - [x] Dark Mode
 
 ## First, install the dependencies by running the following command in the project directory.
