@@ -1,13 +1,12 @@
 "use client"; // for client side rendering only
 import { decrement, increment } from "@/Redux/Features/Count-slice";
-import { AppDispatch, useAppSelector } from "@/Redux/store";
+import { useAppDispatch, useAppSelector } from "@/Redux/hooks";
 import { cToastify } from "@/Shared";
 import React from "react";
 import { useDispatch } from "react-redux";
 
 const Count = () => {
-  const dispatch = useDispatch<AppDispatch>(); // for dispatching actions
-
+  const dispatch = useAppDispatch(); // for dispatching actions
   const countValue = useAppSelector((state) => state.countSlice.count); // for reading values
 
   const incrementNumber = () =>
