@@ -1,5 +1,5 @@
 "use client"; // for client side rendering only
-import { decrement, increment } from "@/Redux/Reducers/Count-slice";
+import { decrement, increment } from "@/Redux/Features/Count-slice";
 import { AppDispatch, useAppSelector } from "@/Redux/store";
 import { cToastify } from "@/Shared";
 import React from "react";
