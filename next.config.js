@@ -32,16 +32,9 @@ const nextConfig = {
   swcMinify: true,
   // output: "standalone",
   experimental: {
-    appDir: true,
+    // appDir: true,
     typedRoutes: true,
   },
-  //   typescript: {
-  // //     // !! WARN !!
-  // //     // Dangerously allow production builds to successfully complete even if
-  // //     // your project has type errors.
-  // //     // !! WARN !!
-  // //     ignoreBuildErrors: true,
-  // //   },
 };
 
 module.exports = withPWA(nextConfig);

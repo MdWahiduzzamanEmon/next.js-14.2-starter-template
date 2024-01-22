@@ -6,11 +6,14 @@ interface PostCallProps {
   customConfig?: any;
 }
 
-let apiUrl ="https://example.com/api";
+let apiUrl = "https://example.com/api";
 
 export async function postCall(
   endpoint: PostCallProps["endpoint"],
-  { body: body, ...customConfig }: PostCallProps["body"] & { customConfig?: any }
+  {
+    body: body,
+    ...customConfig
+  }: PostCallProps["body"] & { customConfig?: any }
 ) {
   const headers = { "Content-Type": "application/json" };
   try {
@@ -35,7 +38,6 @@ export async function postCall(
       return data;
     }
     throw new Error(response.statusText);
-
   } catch (error) {
     //console.log(error);
     return Promise.reject(error);

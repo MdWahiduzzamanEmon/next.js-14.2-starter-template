@@ -1,6 +1,10 @@
-"Next13.4 Latest Project Template: An easy-to-use and pre-configured project template for kickstarting your Next.js 13.4 projects effortlessly. This template comes with all the necessary packages and configurations, allowing you to quickly set up and dive into developing your next cutting-edge web application with Next.js.
+"Next14+ Latest Project Template: An easy-to-use and pre-configured project template for kick starting your Next.js 14+ projects effortlessly. This template comes with all the necessary packages and configurations, allowing you to quickly set up and dive into developing your next cutting-edge web application with Next.js.
 
 ## Getting Started:
+
+\*First Check Node version on your os. for check node version run this command on your terminal `node -v`
+
+\*make sure you have `Node.js version >= v18.17.0` installed on your machine.
 
 \*Clone this repository to your local machine.
 
@@ -8,11 +12,11 @@
 
 \*Start the development server and explore the example components and pages.
 
-\*Customize and build upon the template to create your unique Next.js 13.4 project.
+\*Customize and build upon the template to create your unique Next.js 14+ project.
 
 \*We welcome contributions, bug reports, and feature suggestions. Feel free to fork this repository and submit pull requests to help improve this project template.
 
-Let's build amazing web applications with Next.js 13.4 together!"
+Let's build amazing web applications with Next.js 14+ together!"
 
 # This template contains the following features:
 
