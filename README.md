@@ -4,7 +4,7 @@
 
 \*First Check Node version on your os. for check node version run this command on your terminal `node -v`
 
-\*make sure you have Node.js version >= v18.17.0 installed on your machine.
+\*make sure you have `Node.js version >= v18.17.0` installed on your machine.
 
 \*Clone this repository to your local machine.
 
