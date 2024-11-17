@@ -27,7 +27,7 @@ export async function getCall(
     query?: object;
     revalidate?: number;
     cache?: any;
-  }
+  },
 ) {
   const headers = { "Content-Type": "application/json" };
   try {

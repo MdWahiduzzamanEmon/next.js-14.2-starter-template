@@ -13,7 +13,7 @@ export async function postCall(
   {
     body: body,
     ...customConfig
-  }: PostCallProps["body"] & { customConfig?: any }
+  }: PostCallProps["body"] & { customConfig?: any },
 ) {
   const headers = { "Content-Type": "application/json" };
   try {

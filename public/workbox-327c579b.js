@@ -164,7 +164,7 @@ define(["exports"], function (exports) {
         `An unexpected entry was passed to ` +
         `'workbox-precaching.PrecacheController.addToCacheList()' The entry ` +
         `'${JSON.stringify(
-          entry
+          entry,
         )}' isn't supported. You must supply an array of ` +
         `strings with one or more characters, objects with a url property or ` +
         `Request objects.`
@@ -174,7 +174,7 @@ define(["exports"], function (exports) {
       if (!firstEntry || !secondEntry) {
         throw new Error(
           `Unexpected input to ` +
-            `'add-to-cache-list-duplicate-entries' error.`
+            `'add-to-cache-list-duplicate-entries' error.`,
         );
       }
       return (
@@ -188,7 +188,7 @@ define(["exports"], function (exports) {
     "plugin-error-request-will-fetch": ({ thrownErrorMessage }) => {
       if (!thrownErrorMessage) {
         throw new Error(
-          `Unexpected input to ` + `'plugin-error-request-will-fetch', error.`
+          `Unexpected input to ` + `'plugin-error-request-will-fetch', error.`,
         );
       }
       return (
@@ -199,7 +199,7 @@ define(["exports"], function (exports) {
     "invalid-cache-name": ({ cacheNameId, value }) => {
       if (!cacheNameId) {
         throw new Error(
-          `Expected a 'cacheNameId' for error 'invalid-cache-name'`
+          `Expected a 'cacheNameId' for error 'invalid-cache-name'`,
         );
       }
       return (
@@ -212,7 +212,7 @@ define(["exports"], function (exports) {
       if (!method) {
         throw new Error(
           `Unexpected input to ` +
-            `'unregister-route-but-not-found-with-method' error.`
+            `'unregister-route-but-not-found-with-method' error.`,
         );
       }
       return (
@@ -493,7 +493,7 @@ define(["exports"], function (exports) {
     // Need the general type to do the check later.
     // eslint-disable-next-line @typescript-eslint/ban-types
     expectedClass,
-    details
+    details,
   ) => {
     if (!(object instanceof expectedClass)) {
       details["expectedClassName"] = expectedClass.name;
@@ -503,7 +503,7 @@ define(["exports"], function (exports) {
   const isOneOf = (value, validValues, details) => {
     if (!validValues.includes(value)) {
       details["validValueDescription"] = `Valid values are ${JSON.stringify(
-        validValues
+        validValues,
       )}.`;
       throw new WorkboxError("invalid-value", details);
     }
@@ -513,7 +513,7 @@ define(["exports"], function (exports) {
     // Need general type to do check later.
     expectedClass,
     // eslint-disable-line
-    details
+    details,
   ) => {
     const error = new WorkboxError("not-array-of-class", details);
     if (!Array.isArray(value)) {
@@ -718,7 +718,7 @@ define(["exports"], function (exports) {
             logger.debug(
               `The regular expression '${regExp.toString()}' only partially matched ` +
                 `against the cross-origin URL '${url.toString()}'. RegExpRoute's will only ` +
-                `handle cross-origin requests if they match the entire URL.`
+                `handle cross-origin requests if they match the entire URL.`,
             );
           }
           return;
@@ -850,7 +850,7 @@ define(["exports"], function (exports) {
               // TODO(philipwalton): TypeScript errors without this typecast for
               // some reason (probably a bug). The real type here should work but
               // doesn't: `Array<Promise<Response> | undefined>`.
-            })
+            }),
           ); // TypeScript
           event.waitUntil(requestPromises);
           // If a MessageChannel was used, reply to the message on success.
@@ -885,7 +885,7 @@ define(["exports"], function (exports) {
       if (!url.protocol.startsWith("http")) {
         {
           logger.debug(
-            `Workbox Router only supports URLs that start with 'http'.`
+            `Workbox Router only supports URLs that start with 'http'.`,
           );
         }
         return;
@@ -917,7 +917,7 @@ define(["exports"], function (exports) {
         {
           debugMessages.push(
             `Failed to find a matching route. Falling ` +
-              `back to the default handler for ${method}.`
+              `back to the default handler for ${method}.`,
           );
         }
         handler = this._defaultHandlerMap.get(method);
@@ -934,7 +934,7 @@ define(["exports"], function (exports) {
         // We have a handler, meaning Workbox is going to handle the route.
         // print the routing details to the console.
         logger.groupCollapsed(
-          `Router is responding to: ${getFriendlyURL(url)}`
+          `Router is responding to: ${getFriendlyURL(url)}`,
         );
         debugMessages.forEach((msg) => {
           if (Array.isArray(msg)) {
@@ -973,8 +973,8 @@ define(["exports"], function (exports) {
               logger.groupCollapsed(
                 `Error thrown when responding to: ` +
                   ` ${getFriendlyURL(
-                    url
-                  )}. Falling back to route's Catch Handler.`
+                    url,
+                  )}. Falling back to route's Catch Handler.`,
               );
               logger.error(`Error thrown by:`, route);
               logger.error(err);
@@ -1000,8 +1000,8 @@ define(["exports"], function (exports) {
               logger.groupCollapsed(
                 `Error thrown when responding to: ` +
                   ` ${getFriendlyURL(
-                    url
-                  )}. Falling back to global Catch Handler.`
+                    url,
+                  )}. Falling back to global Catch Handler.`,
               );
               logger.error(`Error thrown by:`, route);
               logger.error(err);
@@ -1054,7 +1054,7 @@ define(["exports"], function (exports) {
                 `While routing ${getFriendlyURL(url)}, an async ` +
                   `matchCallback function was used. Please convert the ` +
                   `following route to use a synchronous matchCallback function:`,
-                route
+                route,
               );
             }
           }
@@ -1252,7 +1252,7 @@ define(["exports"], function (exports) {
           logger.debug(
             `The '$capture' parameter contains an Express-style wildcard ` +
               `character (${wildcards}). Strings are now always interpreted as ` +
-              `exact matches; use a RegExp for partial or wildcard matches.`
+              `exact matches; use a RegExp for partial or wildcard matches.`,
           );
         }
       }
@@ -1265,7 +1265,7 @@ define(["exports"], function (exports) {
             logger.debug(
               `${capture} only partially matches the cross-origin URL ` +
                 `${url.toString()}. This route will only handle cross-origin requests ` +
-                `if they match the entire URL.`
+                `if they match the entire URL.`,
             );
           }
         }
@@ -1404,7 +1404,7 @@ define(["exports"], function (exports) {
     cache,
     request,
     ignoreParams,
-    matchOptions
+    matchOptions,
   ) {
     const strippedRequestURL = stripParams(request.url, ignoreParams);
     // If the request doesn't include any ignored params, match as normal.
@@ -1482,7 +1482,7 @@ define(["exports"], function (exports) {
     {
       logger.log(
         `About to run ${quotaErrorCallbacks.size} ` +
-          `callbacks to clean up caches.`
+          `callbacks to clean up caches.`,
       );
     }
     for (const callback of quotaErrorCallbacks) {
@@ -1637,7 +1637,7 @@ define(["exports"], function (exports) {
           {
             logger.log(
               `Using a preloaded navigation response for ` +
-                `'${getFriendlyURL(request.url)}'`
+                `'${getFriendlyURL(request.url)}'`,
             );
           }
           return possiblePreloadResponse;
@@ -1672,13 +1672,13 @@ define(["exports"], function (exports) {
         // See https://github.com/GoogleChrome/workbox/issues/1796
         fetchResponse = await fetch(
           request,
-          request.mode === "navigate" ? undefined : this._strategy.fetchOptions
+          request.mode === "navigate" ? undefined : this._strategy.fetchOptions,
         );
         if ("development" !== "production") {
           logger.debug(
             `Network request for ` +
               `'${getFriendlyURL(request.url)}' returned a response with ` +
-              `status '${fetchResponse.status}'.`
+              `status '${fetchResponse.status}'.`,
           );
         }
         for (const callback of this.iterateCallbacks("fetchDidSucceed")) {
@@ -1694,7 +1694,7 @@ define(["exports"], function (exports) {
           logger.log(
             `Network request for ` +
               `'${getFriendlyURL(request.url)}' threw an error.`,
-            error
+            error,
           );
         }
         // `originalRequest` will only exist if a `fetchDidFail` callback
@@ -1755,7 +1755,7 @@ define(["exports"], function (exports) {
         }
       }
       for (const callback of this.iterateCallbacks(
-        "cachedResponseWillBeUsed"
+        "cachedResponseWillBeUsed",
       )) {
         cachedResponse =
           (await callback({
@@ -1803,7 +1803,7 @@ define(["exports"], function (exports) {
             `The response for ${getFriendlyURL(effectiveRequest.url)} ` +
               `has a 'Vary: ${vary}' header. ` +
               `Consider setting the {ignoreVary: true} option on your strategy ` +
-              `to ensure cache matching and deletion works as expected.`
+              `to ensure cache matching and deletion works as expected.`,
           );
         }
       }
@@ -1811,7 +1811,7 @@ define(["exports"], function (exports) {
         {
           logger.error(
             `Cannot cache non-existent response for ` +
-              `'${getFriendlyURL(effectiveRequest.url)}'.`
+              `'${getFriendlyURL(effectiveRequest.url)}'.`,
           );
         }
         throw new WorkboxError("cache-put-with-no-response", {
@@ -1824,7 +1824,7 @@ define(["exports"], function (exports) {
           logger.debug(
             `Response '${getFriendlyURL(effectiveRequest.url)}' ` +
               `will not be cached.`,
-            responseToCache
+            responseToCache,
           );
         }
         return false;
@@ -1840,19 +1840,19 @@ define(["exports"], function (exports) {
             cache,
             effectiveRequest.clone(),
             ["__WB_REVISION__"],
-            matchOptions
+            matchOptions,
           )
         : null;
       {
         logger.debug(
           `Updating the '${cacheName}' cache with a new Response ` +
-            `for ${getFriendlyURL(effectiveRequest.url)}.`
+            `for ${getFriendlyURL(effectiveRequest.url)}.`,
         );
       }
       try {
         await cache.put(
           effectiveRequest,
-          hasCacheUpdateCallback ? responseToCache.clone() : responseToCache
+          hasCacheUpdateCallback ? responseToCache.clone() : responseToCache,
         );
       } catch (error) {
         if (error instanceof Error) {
@@ -1897,7 +1897,7 @@ define(["exports"], function (exports) {
               event: this.event,
               // params has a type any can't change right now.
               params: this.params, // eslint-disable-line
-            })
+            }),
           );
         }
 
@@ -2044,13 +2044,13 @@ define(["exports"], function (exports) {
                 logger.warn(
                   `The response for '${this.request.url}' ` +
                     `is an opaque response. The caching strategy that you're ` +
-                    `using will not cache opaque responses by default.`
+                    `using will not cache opaque responses by default.`,
                 );
               } else {
                 logger.debug(
                   `The response for '${this.request.url}' ` +
                     `returned a status code of '${response.status}' and won't ` +
-                    `be cached as a result.`
+                    `be cached as a result.`,
                 );
               }
             }
@@ -2199,7 +2199,7 @@ define(["exports"], function (exports) {
         responseDone,
         handler,
         request,
-        event
+        event,
       );
       // Return an array of promises, suitable for use with Promise.all().
       return [responseDone, handlerDone];
@@ -2241,7 +2241,7 @@ define(["exports"], function (exports) {
               `an ${
                 error instanceof Error ? error.toString() : ""
               } error occurred. Using a fallback response provided by ` +
-              `a handlerDidError plugin.`
+              `a handlerDidError plugin.`,
           );
         }
       }
@@ -2434,11 +2434,11 @@ define(["exports"], function (exports) {
             // have to check to see if it's still "in flight".
             (await networkPromise)
           );
-        })()
+        })(),
       );
       {
         logger.groupCollapsed(
-          messages.strategyStart(this.constructor.name, request)
+          messages.strategyStart(this.constructor.name, request),
         );
         for (const log of logs) {
           logger.log(log);
@@ -2469,14 +2469,14 @@ define(["exports"], function (exports) {
           {
             logs.push(
               `Timing out the network response at ` +
-                `${this._networkTimeoutSeconds} seconds.`
+                `${this._networkTimeoutSeconds} seconds.`,
             );
           }
           resolve(await handler.cacheMatch(request));
         };
         timeoutId = setTimeout(
           onNetworkTimeout,
-          this._networkTimeoutSeconds * 1000
+          this._networkTimeoutSeconds * 1000,
         );
       });
       return {
@@ -2513,7 +2513,7 @@ define(["exports"], function (exports) {
         } else {
           logs.push(
             `Unable to get a response from the network. Will respond ` +
-              `with a cached response.`
+              `with a cached response.`,
           );
         }
       }
@@ -2522,7 +2522,7 @@ define(["exports"], function (exports) {
         {
           if (response) {
             logs.push(
-              `Found a cached response in the '${this.cacheName}'` + ` cache.`
+              `Found a cached response in the '${this.cacheName}'` + ` cache.`,
             );
           } else {
             logs.push(`No response found in the '${this.cacheName}' cache.`);
@@ -2597,7 +2597,7 @@ define(["exports"], function (exports) {
         if (!response) {
           throw new Error(
             `Timed out the network response after ` +
-              `${this._networkTimeoutSeconds} seconds.`
+              `${this._networkTimeoutSeconds} seconds.`,
           );
         }
       } catch (err) {
@@ -2607,7 +2607,7 @@ define(["exports"], function (exports) {
       }
       {
         logger.groupCollapsed(
-          messages.strategyStart(this.constructor.name, request)
+          messages.strategyStart(this.constructor.name, request),
         );
         if (response) {
           logger.log(`Got response from network.`);

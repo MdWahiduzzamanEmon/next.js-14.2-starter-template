@@ -14,7 +14,7 @@ const Count = () => {
     dispatch(
       increment({
         amount: 1,
-      })
+      }),
     );
 
   const decrementNumber = () => {
@@ -28,7 +28,7 @@ const Count = () => {
     dispatch(
       decrement({
         amount: 1,
-      })
+      }),
     );
   };
 
