@@ -2,14 +2,16 @@ import { cToastify } from "@/Shared";
 
 interface GetCallProps {
   endpoint: string;
-  data?: any;
-  body?: any;
-  customConfig?: any;
-  query?: object;
+  data?: Record<string, unknown>;
+  body?: Record<string, unknown>;
+  customConfig?: {
+    headers?: Record<string, string>;
+  };
+  query?: Record<string, string>;
   revalidate?: number;
-  cache?: any;
+  cache?: RequestCache;
 }
-let apiUrl = "https://example.com/api";
+const apiUrl = "https://example.com/api";
 
 export async function getCall(
   endpoint: GetCallProps["endpoint"],
@@ -22,12 +24,14 @@ export async function getCall(
     cache: cache = "default",
     ...customConfig
   }: GetCallProps["body"] & {
-    data?: any;
-    customConfig?: any;
-    query?: object;
+    data?: Record<string, unknown>;
+    customConfig?: {
+      headers?: Record<string, string>;
+    };
+    query?: Record<string, string>;
     revalidate?: number;
-    cache?: any;
-  }
+    cache?: RequestCache;
+  },
 ) {
   const headers = { "Content-Type": "application/json" };
   try {
@@ -49,7 +53,7 @@ export async function getCall(
       method: "GET",
       headers: {
         ...headers,
-        ...customConfig.headers,
+        ...(customConfig.headers || {}),
       },
       next: {
         revalidate: revalidate,

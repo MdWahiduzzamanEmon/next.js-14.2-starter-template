@@ -61,7 +61,7 @@ if (!self.define) {
       require,
     };
     registry[uri] = Promise.all(
-      depsNames.map((depName) => specialDeps[depName] || require(depName))
+      depsNames.map((depName) => specialDeps[depName] || require(depName)),
     ).then((deps) => {
       factory(...deps);
       return exports;
@@ -93,7 +93,7 @@ define(["./workbox-327c579b"], function (workbox) {
         },
       ],
     }),
-    "GET"
+    "GET",
   );
   workbox.registerRoute(
     /.*/i,
@@ -101,7 +101,7 @@ define(["./workbox-327c579b"], function (workbox) {
       cacheName: "dev",
       plugins: [],
     }),
-    "GET"
+    "GET",
   );
 });
 //# sourceMappingURL=sw.js.map

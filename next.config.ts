@@ -1,16 +1,16 @@
 /** @type {import('next').NextConfig} */
-const withPWAInit = require("@imbios/next-pwa");
+import withPWAInit from "@imbios/next-pwa";
 const isDev = process.env.NODE_ENV !== "production";
 
 const withPWA = withPWAInit({
   // your other config
   exclude: [
     // add buildExcludes here
-    ({ asset, compilation }) => {
+    ({ asset }: { asset: { name: string } }) => {
       if (
         asset.name.startsWith("server/") ||
         asset.name.match(
-          /^((app-|^)build-manifest\.json|react-loadable-manifest\.json)$/
+          /^((app-|^)build-manifest\.json|react-loadable-manifest\.json)$/,
         )
       ) {
         return true;
@@ -27,13 +27,12 @@ const nextConfig = {
   images: {
     domains: ["picsum.photos", "cdn.auth0.com"],
   },
-  reactStrictMode: true,
+  distDir: "build",
   productionBrowserSourceMaps: true,
-  swcMinify: true,
-  // output: "standalone",
   experimental: {
-    // appDir: true,
-    typedRoutes: true,
+    turbo: {
+      enabled: true,
+    },
   },
 };
 
