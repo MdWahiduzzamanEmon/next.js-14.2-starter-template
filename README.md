@@ -1,4 +1,4 @@
-"Next14+ Latest Project Template: An easy-to-use and pre-configured project template for kick starting your Next.js 14+ projects effortlessly. This template comes with all the necessary packages and configurations, allowing you to quickly set up and dive into developing your next cutting-edge web application with Next.js.
+"Next15+ Latest Project Template: An easy-to-use and pre-configured project template for kick starting your Next.js 15+ projects effortlessly. This template comes with all the necessary packages and configurations, allowing you to quickly set up and dive into developing your next cutting-edge web application with Next.js.
 
 ## Getting Started:
 
@@ -12,11 +12,11 @@
 
 \*Start the development server and explore the example components and pages.
 
-\*Customize and build upon the template to create your unique Next.js 14+ project.
+\*Customize and build upon the template to create your unique Next.js 15+ project.
 
 \*We welcome contributions, bug reports, and feature suggestions. Feel free to fork this repository and submit pull requests to help improve this project template.
 
-Let's build amazing web applications with Next.js 14+ together!"
+Let's build amazing web applications with Next.js 15+ together!"
 
 # This template contains the following features:
 
