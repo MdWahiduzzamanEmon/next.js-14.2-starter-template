@@ -3,13 +3,12 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "prettier --write \"**/*.{js,ts,tsx,vue,scss,html,md,json}\" --ignore-path .gitignore && next lint && next dev --turbopack && next-sitemap --watch",
+    "dev": "prettier --write \"**/*.{js,ts,tsx,vue,scss,html,md,json}\" --ignore-path .gitignore && next lint && next dev --turbopack",
     "build": "next build",
     "start": "prettier --write \"**/*.{js,ts,tsx,vue,scss,html,md,json}\" --ignore-path .gitignore && next start",
     "lint": "next lint",
     "start-next": "next dev -p 8090",
-    "format": "prettier --write \"**/*.{js,ts,tsx,vue,scss,html,md,json}\" --ignore-path .gitignore",
-    "postbuild": "next-sitemap"
+    "format": "prettier --check \"**/*.{js,ts,tsx,vue,scss,html,md,json}\" --ignore-path .gitignore"
   },
   "dependencies": {
     "@imbios/next-pwa": "^1.1.1",
