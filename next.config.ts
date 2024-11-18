@@ -10,7 +10,7 @@ const withPWA = withPWAInit({
       if (
         asset.name.startsWith("server/") ||
         asset.name.match(
-          /^((app-|^)build-manifest\.json|react-loadable-manifest\.json)$/
+          /^((app-|^)build-manifest\.json|react-loadable-manifest\.json)$/,
         )
       ) {
         return true;
