@@ -2,27 +2,29 @@ import { cToastify } from "@/Shared";
 
 interface PostCallProps {
   endpoint: string;
-  body: any;
-  customConfig?: any;
+  body: Record<string, unknown>;
+  customConfig?: {
+    headers?: Record<string, string>;
+  };
 }
 
-let apiUrl = "https://example.com/api";
+const apiUrl = "https://example.com/api";
 
 export async function postCall(
   endpoint: PostCallProps["endpoint"],
   {
     body: body,
     ...customConfig
-  }: PostCallProps["body"] & { customConfig?: any },
+  }: PostCallProps["body"] & { customConfig?: PostCallProps["customConfig"] },
 ) {
   const headers = { "Content-Type": "application/json" };
   try {
-    let url = `${apiUrl}/${endpoint}`;
+    const url = `${apiUrl}/${endpoint}`;
     const response = await fetch(url, {
       method: "POST",
       headers: {
         ...headers,
-        ...customConfig.headers,
+        ...(customConfig?.headers || {}),
       },
       body: JSON.stringify(body),
     });

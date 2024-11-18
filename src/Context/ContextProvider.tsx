@@ -10,13 +10,7 @@ interface Props {
 
 const ContextProvider = ({ children }: Props): React.ReactElement<Props> => {
   return (
-    <Context.Provider
-      value={
-        {
-          // @ts-ignore
-        }
-      }
-    >
+    <Context.Provider value={{}}>
       {children}
       <ToastContainer pauseOnFocusLoss={false} />
     </Context.Provider>
